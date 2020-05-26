@@ -16,7 +16,6 @@ export const LogoContainer = styled.div`
 
 // Navbar
 export const Navbar = styled.nav`
-<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   background-color: #211620;
