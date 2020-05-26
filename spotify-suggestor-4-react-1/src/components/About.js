@@ -1,10 +1,10 @@
 import React from "react";
 
-//testing 123
 const About = () => {
   return (
     <div>
       <h2>Meet Our Team!</h2>
+      <h2>Pull in ABout page code from UI</h2>
     </div>
   );
 };
