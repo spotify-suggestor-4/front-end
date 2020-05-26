@@ -1,12 +1,12 @@
-import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import React from "react";
+import { Route, Link, Switch } from "react-router-dom";
 // Components
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import Home from './components/Home';
-import About from './components/About';
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import Home from "./components/Home";
+import About from "./components/About";
 // Styles
-import { Navbar } from './components/Styles';
+import { Navbar } from "./components/Styles";
 
 function App() {
   return (
@@ -19,10 +19,18 @@ function App() {
       </Navbar>
 
       <Switch>
-        <Route exact path='/signup' ><SignUp /></Route>
-        <Route exact path='/login' ><Login /></Route>
-        <Route exact path='/about' ><About /></Route>
-        <Route exact path='/' ><Home /></Route>
+        <Route exact path='/signup'>
+          <SignUp />
+        </Route>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
+        <Route exact path='/'>
+          <Home />
+        </Route>
       </Switch>
     </div>
   );
