@@ -6,16 +6,14 @@ import Button2 from "./Styles2/Button2";
 
 const Form = () => {
   const [formState, setFormState] = useState({
-    first_name: "",
-    last_name: "",
+    user_name: "",
     email: "",
     password: "",
     terms: "",
   });
 
   const [errors, setErrors] = useState({
-    first_name: "",
-    last_name: "",
+    user_name: "",
     email: "",
     password: "",
     terms: "",
@@ -80,7 +78,10 @@ const Form = () => {
   const formSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://spotify-song-suggestor-api.herokuapp.com/api/auth/register", formState)
+      .post(
+        "https://spotify-song-suggestor-api.herokuapp.com/api/auth/register",
+        formState
+      )
       .then((res) => {
         setPost(res.data);
         console.log("success", post);
