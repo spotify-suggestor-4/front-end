@@ -1,6 +1,17 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import logo from "./logo.svg";
+//temporary placeholder
+import logo from "./Images/logo.png";
+
+//components import
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import Form from "./Components/Form";
+import Dashboard from "./Components/Dashboard";
+import Login from "./Components/Login";
+import Signup from "./Components/Signup";
+
+//style imports
 import "./App.css";
 
 function App() {
@@ -8,17 +19,6 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
