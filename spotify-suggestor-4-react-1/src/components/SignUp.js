@@ -111,26 +111,12 @@ const Form = () => {
           <input
             className='input'
             type='text'
-            id='first_name'
+            id='user_name'
             name='name'
             onChange={inputChange}
             value={formState.user_name}
           />
           {errors.first_name.length > 0 ? (
-            <p className='error'>{errors.user_name}</p>
-          ) : null}
-        </label>
-        <label htmlFor='user_name'>
-          Last Name
-          <input
-            className='input'
-            type='text'
-            id='last_name'
-            name='name'
-            onChange={inputChange}
-            value={formState.user_name}
-          />
-          {errors.last_name.length > 0 ? (
             <p className='error'>{errors.user_name}</p>
           ) : null}
         </label>
