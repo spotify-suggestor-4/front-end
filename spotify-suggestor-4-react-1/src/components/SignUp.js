@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import * as yup from "yup";
 import axios from "axios";
 
+import Button2 from "./Styles/Button2";
+
 const Form = () => {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     password: "",
     terms: "",
-    role: "",
   });
 
   const [errors, setErrors] = useState({
@@ -16,7 +17,6 @@ const Form = () => {
     email: "",
     password: "",
     terms: "",
-    role: "",
   });
 
   const [buttonDisabled, setButtonDisabled] = useState("");
@@ -163,9 +163,9 @@ const Form = () => {
           I accept the Terms & Conditions
         </label>
         {/* //submit button */}
-        <button className='button' disabled={buttonDisabled} type='submit'>
+        <Button2 className='button' disabled={buttonDisabled} type='submit'>
           Finish
-        </button>
+        </Button2>
       </form>
     </div>
   );
