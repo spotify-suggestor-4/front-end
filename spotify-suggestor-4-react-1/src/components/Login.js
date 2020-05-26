@@ -22,11 +22,11 @@ const Login = (props) => {
     );
   };
 
-  useEffect(() => {
-    if (localStorage.getItem("token")) props.history.push("/");
-    return () => props.clearErrorMessages();
-  }, []);
-  console.log({ isLoading: props.isLoading });
+  // useEffect(() => {
+  //   if (localStorage.getItem("token")) props.history.push("/");
+  //   return () => props.clearErrorMessages();
+  // }, []);
+  // console.log({ isLoading: props.isLoading });
 
   return (
     <div className='login-page-container'>
