@@ -37,7 +37,6 @@ const Login = (props) => {
             <h1>Log in</h1>
           </span>
           <div>Please log in using the form below.</div>
-          )}
           <label>Username:</label>
           <input
             type='text'
@@ -59,7 +58,6 @@ const Login = (props) => {
             If you do not have an account with us,{" "}
             <Link to='/signup'>Sign up here</Link>.
           </div>
-          )}
         </form>
         {/* //CLOSE FORM */}
       </div>
@@ -68,5 +66,7 @@ const Login = (props) => {
     //CLOSE LOGIN PAGE
   );
 };
+
+// };
 
 export default Login;
