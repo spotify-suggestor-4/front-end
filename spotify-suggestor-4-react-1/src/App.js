@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 //temporary placeholder
 import logo from "./Images/logo.png";
 
