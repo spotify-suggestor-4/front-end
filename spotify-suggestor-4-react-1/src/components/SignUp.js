@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import * as yup from "yup";
 import axios from "axios";
 
-import Button2 from "./Styles/Button2";
+import Button2 from "./Styles2/Button2";
 
 const Form = () => {
   const [formState, setFormState] = useState({
@@ -83,8 +83,7 @@ const Form = () => {
         setPost(res.data);
         console.log("success", post);
         setFormState({
-          first_name: "",
-          last_name: "",
+          user_name: "",
           email: "",
           password: "",
           terms: "",
