@@ -1,12 +1,13 @@
 import React from "react";
 import { Route, Link, Switch } from "react-router-dom";
 // Components
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import Home from "./components/Home";
-import About from "./components/About";
-import PrivateRoute from "./components/PrivateRoute";
-import Suggestor from "./components/Suggestor";
+
+import Login from './components/Login';
+import SignUp from './components/SignUp';
+import Home from './components/Home';
+import About from './components/About';
+// import PrivateRoute from './components/PrivateRoute';
+import Suggestor from './components/Suggestor';
 // Styles
 import { Navbar, LogoContainer } from "./components/Styles.js";
 // Logo

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Login = (props) => {
   //set user
   const [user, setUser] = useState({ username: "", password: "" });
-
+console.log(props)
   //handle change
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });

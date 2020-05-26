@@ -8,11 +8,11 @@ import Song from "./Song";
 import SongCard from "./SongCard";
 import Button3 from "./Styles2/Button3";
 
+
 const Suggestor = () => {
   const [searchTitle, setSearchTitle] = useState("");
   const [searchArtist, setSearchArtist] = useState("");
 
-  // useEffect(() => {
 
   // })
 
