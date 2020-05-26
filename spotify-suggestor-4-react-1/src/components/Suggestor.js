@@ -1,24 +1,33 @@
-import React from 'react';
-import { SearchContainer, SuggestedSongsContainer } from './Styles';
+import React, { useState } from 'react';
+import { SearchContainer, SuggestedSongsContainer, SongCardContainer } from './Styles';
 import Song from './Song';
+import SongCard from './SongCard';
 
 const Suggestor = () => {
+
+    const [searchTitle, setSearchTitle] = useState('');
+    const [searchArtist, setSearchArtis] = useState('');
+
+    // useEffect(() => {
+
+    // })
+
     return (
     <>
         <SearchContainer>
             <h2>What would you like to discover today?</h2>
             <input 
             placeholder='Search by song title'
-            maxLength='12'
+            
             /> 
             <input 
             placeholder='Search by artist'
-            maxLength='12'
+            
             /> <br />
             <button>Search</button>
         </SearchContainer>
         <SuggestedSongsContainer>
-            <Song />
+            <SongCard />
         </SuggestedSongsContainer>
     </>
     )
