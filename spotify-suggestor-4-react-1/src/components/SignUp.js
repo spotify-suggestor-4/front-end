@@ -4,7 +4,8 @@ import axios from "axios";
 
 const Form = () => {
   const [formState, setFormState] = useState({
-    name: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
     terms: "",
@@ -12,7 +13,8 @@ const Form = () => {
   });
 
   const [errors, setErrors] = useState({
-    name: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
     terms: "",
@@ -78,7 +80,7 @@ const Form = () => {
   const formSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://reqres.in/api/users", formState)
+      .post("https://spotify-song-suggestor-api.herokuapp.com/api/auth/register", formState)
       .then((res) => {
         setPost(res.data);
         console.log("success", post);
@@ -105,20 +107,33 @@ const Form = () => {
       <form className='form' onSubmit={formSubmit}>
         {/* //create user name input */}
         <label htmlFor='user_name'>
-          Create username
+          First Name
           <input
             className='input'
             type='text'
-            id='user_name'
+            id='first_name'
             name='name'
             onChange={inputChange}
             value={formState.user_name}
           />
-          {errors.name.length > 0 ? (
+          {errors.first_name.length > 0 ? (
             <p className='error'>{errors.user_name}</p>
           ) : null}
         </label>
-
+        <label htmlFor='user_name'>
+          Last Name
+          <input
+            className='input'
+            type='text'
+            id='last_name'
+            name='name'
+            onChange={inputChange}
+            value={formState.user_name}
+          />
+          {errors.last_name.length > 0 ? (
+            <p className='error'>{errors.user_name}</p>
+          ) : null}
+        </label>
         {/* //email input */}
         <label htmlFor='email'>
           Email

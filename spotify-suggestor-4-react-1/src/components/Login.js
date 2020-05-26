@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Login = (props) => {
   //set user
   const [user, setUser] = useState({ username: "", password: "" });
-
+console.log(props)
   //handle change
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
@@ -22,11 +22,11 @@ const Login = (props) => {
     );
   };
 
-  useEffect(() => {
-    if (localStorage.getItem("token")) props.history.push("/");
-    return () => props.clearErrorMessages();
-  }, []);
-  console.log({ isLoading: props.isLoading });
+  // useEffect(() => {
+  //   if (localStorage.getItem("token")) props.history.push("/");
+  //   return () => props.clearErrorMessages();
+  // }, []);
+  // console.log({ isLoading: props.isLoading });
 
   return (
     <div className='login-page-container'>

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { SearchContainer, SuggestedSongsContainer, SongCardContainer } from './Styles';
-import Song from './Song';
+import { SearchContainer, SuggestedSongsContainer } from './Styles';
 import SongCard from './SongCard';
 
 const Suggestor = () => {
 
-    const [searchTitle, setSearchTitle] = useState('');
-    const [searchArtist, setSearchArtist] = useState('');
+    // const [searchTitle, setSearchTitle] = useState('');
+    // const [searchArtist, setSearchArtist] = useState('');
 
     // useEffect(() => {
 
