@@ -6,7 +6,7 @@ import SongCard from './SongCard';
 const Suggestor = () => {
 
     const [searchTitle, setSearchTitle] = useState('');
-    const [searchArtist, setSearchArtis] = useState('');
+    const [searchArtist, setSearchArtist] = useState('');
 
     // useEffect(() => {
 
@@ -17,7 +17,7 @@ const Suggestor = () => {
         <SearchContainer>
             <h2>What would you like to discover today?</h2>
             <input 
-            placeholder='Search by song title'
+            placeholder='Search by song'
             
             /> 
             <input 

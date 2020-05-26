@@ -4,8 +4,13 @@ import stadiumimg from '../Images/groupstadium-image.png';
 // Logo
 export const LogoContainer = styled.div`
     display: flex;
+    margin: 0px 10px; 
     p {
-        color: #08FDEE
+        color: #08FDEE;
+        margin: 16px 10px; 
+    }
+    img {
+        margin-top: 4px;
     }
 `;
 
@@ -14,22 +19,22 @@ export const Navbar = styled.nav`
     display: flex;
     justify-content: space-between;
     background-color: #211620;
-
+    align-items: center;
     a {
         text-decoration: none;
         color: white;
-        margin: 1% 2%;
+        margin: 16px 10px; 
     }
 `;
 
 // Suggestor
-export const SearchContainer = styled.div`
+export const SearchContainer = styled.section`
     text-align: center;
     background-image: url(${stadiumimg});
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100% 100%;
-    padding: 5%;
+    padding: 7%;
     
     h2, button {
         margin: 0;
@@ -49,8 +54,7 @@ export const SearchContainer = styled.div`
     button {
         background-color: #FC1980;
         width: 15%;
-        padding: 0.3%;
-        margin-bottom: 2%;
+        padding: 0.7%;
         border-radius: 5px;
         border-style: none;
         box-shadow: 0 4px 2px -2px #08FDEE;
