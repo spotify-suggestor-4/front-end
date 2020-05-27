@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as yup from "yup";
-import { axiosWithAuth } from '../utils/axiosWithAuth';
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 import Button2 from "./Styles2/Button2";
 
 const Form = () => {
@@ -78,15 +78,15 @@ const Form = () => {
     e.preventDefault();
     axiosWithAuth()
       .post("/api/auth/register", formState)
-      .then(res => {
+      .then((res) => {
         setPost(res.data);
-        console.log(res.data)
+        console.log(res.data);
         console.log("success", post);
-        window.location.href= '/login'
+        window.location.href = "/login";
         setFormState({
           username: "",
           email: "",
-          password: ""
+          password: "",
         });
       })
       .catch((err) => {
@@ -96,61 +96,64 @@ const Form = () => {
 
   return (
     //   sign up form container
-    <div
-      className='form-di
-    v'
-    >
+    // <div className='form-div'>
+    //   <div className='image-card-2'></div>
+    <div className='signup-page-container'>
+      <div className='image-card-2'></div>
+
       {/* //signup form */}
-      <form className='form' onSubmit={formSubmit}>
-        {/* //create user name input */}
-        <label htmlFor='username'>
-          User Name
-          <input
-            className='input'
-            type='text'
-            id='username'
-            name='username'
-            onChange={inputChange}
-            value={formState.username}
-          />
-          {errors.username.length > 0 ? (
-            <p className='error'>{errors.username}</p>
-          ) : null}
-        </label>
-        {/* //email input */}
-        <label htmlFor='email'>
-          Email
-          <input
-            className='input'
-            type='email'
-            id='email'
-            name='email'
-            onChange={inputChange}
-            value={formState.email}
-          />
-          {errors.email.length > 0 ? (
-            <p className='error'>{errors.email}</p>
-          ) : null}
-        </label>
+      <div className='signup-form-container'>
+        <form className='form' onSubmit={formSubmit}>
+          <h2>Please create...</h2>
+          {/* //create user name input */}
+          <label htmlFor='username'>
+            User Name
+            <input
+              className='input'
+              type='text'
+              id='username'
+              name='username'
+              onChange={inputChange}
+              value={formState.username}
+            />
+            {errors.username.length > 0 ? (
+              <p className='error'>{errors.username}</p>
+            ) : null}
+          </label>
+          {/* //email input */}
+          <label htmlFor='email'>
+            Email
+            <input
+              className='input'
+              type='email'
+              id='email'
+              name='email'
+              onChange={inputChange}
+              value={formState.email}
+            />
+            {errors.email.length > 0 ? (
+              <p className='error'>{errors.email}</p>
+            ) : null}
+          </label>
 
-        {/* //password input */}
-        <label htmlFor='password'>
-          Password
-          <input
-            className='input'
-            type='password'
-            id='password'
-            name='password'
-            onChange={inputChange}
-            value={formState.password}
-          />
-          {errors.password.length > 0 ? (
-            <p className='error'>{errors.password}</p>
-          ) : null}
-        </label>
+          {/* //password input */}
+          <label htmlFor='password'>
+            Password
+            <input
+              className='input'
+              type='password'
+              id='password'
+              name='password'
+              onChange={inputChange}
+              value={formState.password}
+            />
+            {errors.password.length > 0 ? (
+              <p className='error'>{errors.password}</p>
+            ) : null}
+          </label>
 
-        {/* //accept terms input */}
-        {/* <label htmlFor='terms' className='terms'>
+          {/* //accept terms input */}
+          {/* <label htmlFor='terms' className='terms'>
           <input
             type='checkbox'
             id='terms'
@@ -160,11 +163,12 @@ const Form = () => {
           />
           I accept the Terms & Conditions
         </label> */}
-        {/* //submit button */}
-        <Button2 className='button' disabled={buttonDisabled} type='submit'>
-          Finish
-        </Button2>
-      </form>
+          {/* //submit button */}
+          <Button2 className='btn-3' disabled={buttonDisabled} type='submit'>
+            Finish
+          </Button2>
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,16 +1,17 @@
 import React from "react";
 import { Route, Link, Switch } from "react-router-dom";
 // Components
-import Login from './components/Login';
-import SignUp from './components/SignUp';
-import Home from './components/Home';
-import About from './components/About';
-import PrivateRoute from './components/PrivateRoute';
-import Suggestor from './components/Suggestor';
+import Login from "./components/Login";
+import GettingStarted from "./components/GettingStarted";
+import SignUp from "./components/SignUp";
+import Home from "./components/Home";
+import About from "./components/About";
+import PrivateRoute from "./components/PrivateRoute";
+import Suggestor from "./components/Suggestor";
 // Styles
-import { Navbar, LogoContainer } from './components/Styles';
+import { Navbar, LogoContainer } from "./components/Styles";
 // Logo
-import logo from './Images/favicon2.png';
+import logo from "./Images/favicon2.png";
 // testing changes
 
 function App() {
@@ -28,9 +29,11 @@ function App() {
       </Navbar>
 
       <Switch>
-        <Route exact path='/signup' ><SignUp /></Route>
+        <Route exact path='/signup'>
+          <SignUp />
+        </Route>
         {/* Change Suggestor to PrivateRoute once back-end is up */}
-        <PrivateRoute exact path='/suggestor' >
+        <PrivateRoute exact path='/suggestor'>
           <Suggestor />
         </PrivateRoute>
         <Route exact path='/login'>
