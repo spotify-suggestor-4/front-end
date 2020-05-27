@@ -27,7 +27,7 @@ const Login = (props) => {
       .then((res) => {
         console.log(res);
         localStorage.setItem("token", res);
-        window.location.href = "/suggestor";
+        window.location.href = "/";
       })
       .catch((err) => console.log(err));
   };
