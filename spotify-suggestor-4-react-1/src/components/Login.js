@@ -27,7 +27,7 @@ const Login = (props) => {
       .then((res) => {
         console.log(res);
         localStorage.setItem("token", res);
-        window.location.href = "/suggestor";
+        window.location.href = "/";
       })
       .catch((err) => console.log(err));
   };
@@ -66,8 +66,10 @@ const Login = (props) => {
           />
           <Button2 className='btn-3'>Log In</Button2>
           <div className='register_link'>
-            <p> Don't have an account?</p>{" "}
-            <Link to='/signup'> Sign up here</Link>.
+            <p>
+              {" "}
+              Don't have an account? <Link to='/signup'> Sign up here</Link>.
+            </p>
           </div>
         </form>
         {/* //CLOSE FORM */}
