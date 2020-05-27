@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Link, Switch } from "react-router-dom";
 // Components
 import Login from "./components/Login";
-// import GettingStarted from "./components/GettingStarted";
+import GettingStarted from "./components/GettingStarted";
 import SignUp from "./components/SignUp";
 import About from "./components/About";
 import PrivateRoute from "./components/PrivateRoute";
