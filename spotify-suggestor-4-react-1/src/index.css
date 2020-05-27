@@ -48,13 +48,15 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 0;
+  margin-bottom: 5%;
 }
 
 .content-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 8%;
+  margin-top: 3%;
   width: 400px;
 }
 .content-card div {
