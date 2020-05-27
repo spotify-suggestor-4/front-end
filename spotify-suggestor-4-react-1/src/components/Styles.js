@@ -20,6 +20,7 @@ export const Navbar = styled.nav`
   justify-content: space-around;
   background-color: #211620;
   align-items: center;
+  border-bottom: 1px solid #fe28e0;
   a {
     text-decoration: none;
     color: white;

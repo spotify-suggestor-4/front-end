@@ -4,7 +4,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import Login from "./components/Login";
 import GettingStarted from "./components/GettingStarted";
 import SignUp from "./components/SignUp";
-import Home from "./components/Home";
+
 import About from "./components/About";
 import PrivateRoute from "./components/PrivateRoute";
 import Suggestor from "./components/Suggestor";
@@ -40,7 +40,7 @@ function App() {
           <Login />
         </Route>
         <Route exact path='/about'>
-          <About />
+          <GettingStarted />
         </Route>
         {/* Home should probably take use to the suggestor??  and not sure we need as many Nav items considering*/}
         {/* <Route exact path='/'>
