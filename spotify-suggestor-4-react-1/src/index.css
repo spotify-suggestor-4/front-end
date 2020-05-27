@@ -1,12 +1,86 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+/* //brand black #211620
+//turqouise #08FDEE
+//Main pink #FE28E0
+//Red pink #FC1980 */
+
 body {
+  background-color: #211620;
   font-family: "Roboto", sans-serif;
   margin: 0;
   box-sizing: border-box;
+  color: #ffffff;
 }
 
 input,
 button {
   font-family: "Roboto", sans-serif;
+}
+
+.getting-started-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.gs-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+  width: 300px;
+}
+.content-card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-card h1 {
+  color: #fe28e0;
+}
+
+.content-card h2 {
+  color: #08fdee;
+  margin-left: 0;
+  padding: 0;
+}
+
+.content-card h3 {
+  margin-left: 10%;
+  width: 90%;
+}
+.image-card {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 8px;
+  background-image: url(./Images/DJ-image.png);
+  margin-right: 10%;
+  margin-top: 20%;
+}
+
+.content-heading-div {
+  margin-left: 28px;
+}
+.content-heading-div h1 {
+  margin-left: 5px;
+}
+
+li {
+  margin-top: 8px;
+  margin-left: 4px;
+}
+
+.btn-2 {
+  margin-top: 48px;
+  margin-left: 25%;
 }

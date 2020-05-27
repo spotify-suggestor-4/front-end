@@ -6,7 +6,7 @@ import styled from "styled-components";
 //Red pink #FC1980
 const Button2 = styled.button`
   width: 200px;
-  height: 52px;
+  height: 48px;
   background-color: #08fdee;
   color: #211620;
   padding: 4px;

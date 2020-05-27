@@ -43,9 +43,9 @@ function App() {
           <About />
         </Route>
         {/* Home should probably take use to the suggestor??  and not sure we need as many Nav items considering*/}
-        {/* <Route exact path='/'>
-          <Home /> */}
-        {/* </Route> */}
+        <Route exact path='/'>
+          <GettingStarted />
+        </Route>
       </Switch>
     </div>
   );
