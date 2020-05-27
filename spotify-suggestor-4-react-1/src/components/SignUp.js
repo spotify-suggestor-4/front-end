@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from "react";
 import * as yup from "yup";
-import axios from "axios";
-
+import { axiosWithAuth } from '../utils/axiosWithAuth';
 import Button2 from "./Styles2/Button2";
 
 const Form = () => {
   const [formState, setFormState] = useState({
-    first_name: "",
-    last_name: "",
+    username: "",
     email: "",
     password: "",
-    terms: "",
+    // terms: "",
   });
 
   const [errors, setErrors] = useState({
-    first_name: "",
-    last_name: "",
+    username: "",
     email: "",
     password: "",
-    terms: "",
+    // terms: "",
   });
 
   const [buttonDisabled, setButtonDisabled] = useState("");
@@ -26,7 +23,7 @@ const Form = () => {
   const [post, setPost] = useState([]);
 
   const formSchema = yup.object().shape({
-    name: yup.string().required("Name is a required field"),
+    username: yup.string().required("Username is a required field"),
     email: yup.string().email("Must be a valid email").required(),
     password: yup
       .string()
@@ -38,7 +35,7 @@ const Form = () => {
 
     role: yup.string(),
 
-    terms: yup.boolean().oneOf([true], "Please agree to terms of use"),
+    // terms: yup.boolean().oneOf([true], "Please agree to terms of use"),
   });
 
   useEffect(() => {
@@ -79,20 +76,21 @@ const Form = () => {
 
   const formSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post("https://spotify-song-suggestor-api.herokuapp.com/api/auth/register", formState)
-      .then((res) => {
+    axiosWithAuth()
+      .post("/api/auth/register", formState)
+      .then(res => {
         setPost(res.data);
+        console.log(res.data)
         console.log("success", post);
+        window.location.href= '/login'
         setFormState({
-          user_name: "",
+          username: "",
           email: "",
-          password: "",
-          terms: "",
+          password: ""
         });
       })
       .catch((err) => {
-        console.log(err.response);
+        console.log(err);
       });
   };
 
@@ -105,32 +103,18 @@ const Form = () => {
       {/* //signup form */}
       <form className='form' onSubmit={formSubmit}>
         {/* //create user name input */}
-        <label htmlFor='user_name'>
-          First Name
+        <label htmlFor='username'>
+          User Name
           <input
             className='input'
             type='text'
-            id='first_name'
-            name='name'
+            id='username'
+            name='username'
             onChange={inputChange}
-            value={formState.user_name}
+            value={formState.username}
           />
-          {errors.first_name.length > 0 ? (
-            <p className='error'>{errors.user_name}</p>
-          ) : null}
-        </label>
-        <label htmlFor='user_name'>
-          Last Name
-          <input
-            className='input'
-            type='text'
-            id='last_name'
-            name='name'
-            onChange={inputChange}
-            value={formState.user_name}
-          />
-          {errors.last_name.length > 0 ? (
-            <p className='error'>{errors.user_name}</p>
+          {errors.username.length > 0 ? (
+            <p className='error'>{errors.username}</p>
           ) : null}
         </label>
         {/* //email input */}
@@ -166,7 +150,7 @@ const Form = () => {
         </label>
 
         {/* //accept terms input */}
-        <label htmlFor='terms' className='terms'>
+        {/* <label htmlFor='terms' className='terms'>
           <input
             type='checkbox'
             id='terms'
@@ -175,7 +159,7 @@ const Form = () => {
             onChange={inputChange}
           />
           I accept the Terms & Conditions
-        </label>
+        </label> */}
         {/* //submit button */}
         <Button2 className='button' disabled={buttonDisabled} type='submit'>
           Finish
