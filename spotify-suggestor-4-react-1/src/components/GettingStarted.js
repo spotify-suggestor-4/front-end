@@ -12,10 +12,10 @@ const GettingStarted = () => {
       <div className='content-card'>
         <div className='content-heading-div'>
           <h1>Getting Started</h1>
-          <h3>You're only seconds away from discovering new music!</h3>
+          <p>You're only seconds away from discovering new music!</p>
         </div>
 
-        <div>
+        <div className='how-it-works-div'>
           <h2>How it works...</h2>
           <ul>
             <li>Create your profile.</li>
@@ -23,12 +23,11 @@ const GettingStarted = () => {
             <li>Check out your results.</li>
             <li>Save your favorites!</li>
           </ul>
+          <span className='btn-2'>
+            <Button2>Sign up</Button2>
+          </span>
         </div>
         {/* close content card */}
-
-        <span className='btn-2'>
-          <Button2>Sign up</Button2>
-        </span>
       </div>
     </div>
     //close getting started container
