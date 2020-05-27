@@ -17,7 +17,7 @@ export const LogoContainer = styled.div`
 // Navbar
 export const Navbar = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #211620;
   align-items: center;
   a {

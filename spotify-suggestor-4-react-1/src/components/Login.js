@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
+import Button2 from "./Styles2/Button2";
 const Login = (props) => {
   //set user
   const [user, setUser] = useState({ username: "", password: "" });
-console.log(props)
+  console.log(props);
   //handle change
   const handleChange = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value });
@@ -62,7 +63,7 @@ console.log(props)
             onChange={(event) => handleChange(event)}
             value={user.password}
           />
-          <button>Log In</button>
+          <Button2>Log In</Button2>
           <div className='register_link'>
             If you do not have an account with us,{" "}
             <Link to='/signup'>Sign up here</Link>.

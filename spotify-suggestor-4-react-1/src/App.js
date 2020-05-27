@@ -30,10 +30,19 @@ function App() {
       <Switch>
         <Route exact path='/signup' ><SignUp /></Route>
         {/* Change Suggestor to PrivateRoute once back-end is up */}
-        <PrivateRoute exact path='/suggestor' ><Suggestor /></PrivateRoute>
-        <Route exact path='/login' ><Login /></Route>
-        <Route exact path='/about' ><About /></Route>
-        <Route exact path='/' ><Home /></Route>
+        <PrivateRoute exact path='/suggestor' >
+          <Suggestor />
+        </PrivateRoute>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
+        {/* Home should probably take use to the suggestor??  and not sure we need as many Nav items considering*/}
+        <Route exact path='/'>
+          <GettingStarted />
+        </Route>
       </Switch>
     </div>
   );
