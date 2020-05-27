@@ -100,10 +100,9 @@ const Form = () => {
 
       {/* //signup form */}
       <div className='signup-form-container'>
+        <h2>Please create...</h2>
+
         <form className='signup-form' onSubmit={formSubmit}>
-          <span>
-            <h2>Please create...</h2>
-          </span>
           {/* //create user name input */}
           <label htmlFor='username'>
             Username:
@@ -120,8 +119,9 @@ const Form = () => {
             ) : null}
           </label>
           {/* //email input */}
-          <label htmlFor='email'>
-            Email
+
+          <label htmlFor='email' className='email'>
+            Email:
             <input
               className='input'
               type='email'
@@ -137,7 +137,7 @@ const Form = () => {
 
           {/* //password input */}
           <label htmlFor='password'>
-            Password
+            Password:
             <input
               className='input'
               type='password'
@@ -163,7 +163,7 @@ const Form = () => {
           I accept the Terms & Conditions
         </label> */}
           {/* //submit button */}
-          <Button2 className='btn-3' disabled={buttonDisabled} type='submit'>
+          <Button2 className='btn-4' disabled={buttonDisabled} type='submit'>
             Finish
           </Button2>
         </form>
