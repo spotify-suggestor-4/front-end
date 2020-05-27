@@ -18,7 +18,7 @@ function App() {
     <div>
       <Navbar>
         <LogoContainer>
-          <img src={logo} height='40px' />
+          <img src={logo} height='40px' alt='music notes logo' />
           <p>Song Suggestor</p>
         </LogoContainer>
         <Link to='/'>Home</Link>
