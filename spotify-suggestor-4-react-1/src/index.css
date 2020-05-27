@@ -84,3 +84,8 @@ li {
   margin-top: 48px;
   margin-left: 25%;
 }
+
+.register_link a {
+  color: #fe28e0;
+  text-decoration: none;
+}
