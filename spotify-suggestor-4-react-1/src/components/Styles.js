@@ -36,29 +36,38 @@ export const SearchContainer = styled.section`
   background-size: 100% 100%;
   padding: 7%;
 
-  h2,
-  button {
+  h1 {
     margin: 0;
+    font-size: 3.2rem;
+    text-shadow: 0 4px 2px -2px #fc1980;
+    box-shadow: 0 4px 4px -2px #08fdee;
+  }
+
+  h3 {
+    margin-top: 5%;
+    font-size: 2rem;
   }
 
   input {
     border-radius: 5px;
     border-style: none;
-    text-align: center;
+    text-align: left;
     padding: 0.3%;
-    width: 13%;
+    width: 30%;
+
     /* Top, Right, Bottom, Left */
-    margin: 1.5% 3% 2% 0;
+    margin: 5%;
     box-shadow: 0 4px 2px -2px #08fdee;
   }
 
   button {
     background-color: #fc1980;
-    width: 15%;
+    width: 25%;
+    margin-top: 36px;
     padding: 0.7%;
-    border-radius: 5px;
+    border-radius: 8px;
     border-style: none;
-    box-shadow: 0 4px 2px -2px #08fdee;
+    box-shadow: 0 3px 2px -2px #08fdee;
   }
 `;
 
