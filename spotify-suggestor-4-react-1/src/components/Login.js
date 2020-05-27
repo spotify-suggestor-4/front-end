@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 import Button2 from "./Styles2/Button2";
 const Login = (props) => {
@@ -16,11 +17,19 @@ const Login = (props) => {
     //prevent default browser actions
     event.preventDefault();
     //user status and push to new
-    props.login(user, (status) =>
-      status
-        ? props.history.push(props.location.state?.url || "/")
-        : props.history.push("/login")
-    );
+    // props.login(user, (status) =>
+    //   status
+    //     ? props.history.push(props.location.state?.url || "/")
+    //     : props.history.push("/login")
+    // );
+    axiosWithAuth()
+    .post("/api/auth/login", user)
+    .then(res => {
+      console.log(res)
+      localStorage.setItem('token', res)
+      window.location.href= '/suggestor'
+    })
+    .catch(err => console.log(err))
   };
 
   // useEffect(() => {
@@ -44,7 +53,7 @@ const Login = (props) => {
             name='username'
             id='name'
             onChange={(event) => handleChange(event)}
-            value={user.userName}
+            value={user.username}
           />
           <label>Password:</label>
           <input
