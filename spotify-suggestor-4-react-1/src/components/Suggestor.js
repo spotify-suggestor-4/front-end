@@ -1,9 +1,6 @@
 import React from "react";
-import {
-  SearchContainer,
-  SuggestedSongsContainer,
-} from "./Styles";
-import axiosWithAuth from '../utils/axiosWithAuth';
+import { SearchContainer, SuggestedSongsContainer } from "./Styles";
+import axiosWithAuth from "../utils/axiosWithAuth";
 import SongCard from "./SongCard";
 import Button3 from "./Styles2/Button3";
 
@@ -16,8 +13,6 @@ import Button3 from "./Styles2/Button3";
 // }
 
 const Suggestor = () => {
-
-
   // recommend a song (probably change post and add filter, )
   // const recommendSong = e => {
   //   e.preventdefault()
@@ -39,14 +34,13 @@ const Suggestor = () => {
   //   .catch(err => console.log(err))
   // }
 
-
-
   return (
     <>
       <SearchContainer>
-        <h2>What would you like to discover today?</h2>
-        <input placeholder='Search by song' />
-        <input placeholder='Search by artist' /> <br />
+        <h1>What would you like to discover today?</h1>
+        <h3>Search by:</h3>
+        <input placeholder='  Enter song title' />
+        <input placeholder='  Enter artist name' /> <br />
         <Button3>Search</Button3>
       </SearchContainer>
       <SuggestedSongsContainer>
