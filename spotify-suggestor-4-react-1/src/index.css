@@ -97,23 +97,15 @@ li {
 }
 
 /* //sign up page*/
-.register_link a {
-  color: #fe28e0;
-  text-decoration: none;
-  font-size: 1.6rem;
-}
-.register_link p {
-  color: #feec28;
-  text-decoration: none;
-  font-size: 1.6rem;
-}
 
 .signup-page-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: center;
   align-items: center;
-  margin-left: 20%;
+  margin-left: 15%;
+  margin-bottom: 20%;
+  margin-top: 0;
 }
 .signup-form-container {
   width: 60%;
@@ -130,7 +122,7 @@ input {
   margin-left: 16px;
 }
 
-.form h2 {
+.signup-form h2 {
   color: #fe28e0;
 }
 .form-div {
@@ -140,7 +132,7 @@ input {
   align-items: center;
   width: 100%;
 }
-.form {
+.signup-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -163,7 +155,7 @@ input {
 
 .btn-3 {
   margin-top: 48px;
-  margin-left: 10%;
+  margin-left: 0;
   margin-right: 40px;
 }
 
@@ -176,7 +168,7 @@ input {
 .login-form-container {
   width: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -198,9 +190,10 @@ input {
 
 .login-page-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 10%;
-  margin-left: 10%;
+  margin-left: 15%;
+  width: 80%;
 }
 .image-card-3 {
   width: 300px;
@@ -210,4 +203,16 @@ input {
   background-image: url(./Images/DJ-image.png);
   margin-right: 5%;
   margin-top: 10%;
+}
+
+.register_link a {
+  color: #fe28e0;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-top: 56px;
+}
+.register_link p {
+  color: #feec28;
+  text-decoration: none;
+  font-size: 1.4rem;
 }

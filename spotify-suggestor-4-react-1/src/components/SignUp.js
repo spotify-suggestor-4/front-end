@@ -95,19 +95,18 @@ const Form = () => {
   };
 
   return (
-    //   sign up form container
-    // <div className='form-div'>
-    //   <div className='image-card-2'></div>
     <div className='signup-page-container'>
       <div className='image-card-2'></div>
 
       {/* //signup form */}
       <div className='signup-form-container'>
-        <form className='form' onSubmit={formSubmit}>
-          <h2>Please create...</h2>
+        <form className='signup-form' onSubmit={formSubmit}>
+          <span>
+            <h2>Please create...</h2>
+          </span>
           {/* //create user name input */}
           <label htmlFor='username'>
-            User Name
+            Username:
             <input
               className='input'
               type='text'
