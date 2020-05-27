@@ -40,7 +40,8 @@ const Login = (props) => {
 
   return (
     <div className='login-page-container'>
-      <header></header>
+      <div className='image-card-3'></div>
+
       <div className='login-form-container'>
         <form className='login-form' onSubmit={handleLoginSubmit}>
           <span>
@@ -63,9 +64,9 @@ const Login = (props) => {
             onChange={(event) => handleChange(event)}
             value={user.password}
           />
-          <Button2>Log In</Button2>
+          <Button2 className='btn-3'>Log In</Button2>
           <div className='register_link'>
-            If you do not have an account with us,{" "}
+            <p> Don't have an account?</p>{" "}
             <Link to='/signup'> Sign up here</Link>.
           </div>
         </form>
