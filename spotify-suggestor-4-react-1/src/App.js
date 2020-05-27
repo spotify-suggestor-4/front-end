@@ -24,7 +24,13 @@ function App() {
         <Link to='/'>Home</Link>
         <Link to='/login'>Login</Link>
         <Link to='/signup'>SignUp</Link>
-        <Link to='/about'>About</Link>
+        <a
+          target='_blank'
+          href='https://frosty-curran-67a339.netlify.app/about.html'
+        >
+          {" "}
+          About
+        </a>
       </Navbar>
 
       <Switch>
@@ -38,9 +44,10 @@ function App() {
         <Route exact path='/login'>
           <Login />
         </Route>
-        <Route exact path='/about'>
+
+        {/* <Route exact path='/about'>
           <GettingStarted />
-        </Route>
+        </Route> */}
         {/* Home should probably take use to the suggestor??  and not sure we need as many Nav items considering*/}
         <Route exact path='/'>
           <GettingStarted />
