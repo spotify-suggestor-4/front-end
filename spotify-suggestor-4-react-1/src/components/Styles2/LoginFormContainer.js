@@ -17,6 +17,7 @@ const LoginFormContainer = styled.div`
   @media only screen and (max-device-width: 480px) {
     width: 100%;
     margin-top: 36px;
+    flex-direction: column;
   }
 `;
 
