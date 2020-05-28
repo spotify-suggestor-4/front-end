@@ -11,7 +11,8 @@ const LoginFormContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-left: 0;
+  margin-left: 10%;
+  margin-top: 5%;
 
   @media only screen and (max-device-width: 480px) {
     width: 100%;

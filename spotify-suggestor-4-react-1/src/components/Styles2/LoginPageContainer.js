@@ -8,8 +8,9 @@ import styled from "styled-components";
 const LoginPageContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10%;
-  margin-left: 15%;
+  margin-top: 5%;
+  margin-left: 8%;
+  margin-right: 5%;
   width: 90%;
 
   @media only screen and (max-device-width: 480px) {
