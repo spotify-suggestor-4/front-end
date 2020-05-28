@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import * as yup from "yup";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import Button2 from "./Styles2/Button2";
+import SignUpFormContainer from "./Styles2/SignUpFormContainer";
+import SignUpPageContainer from "./Styles2/SignUpPageContainer";
 
 const Form = () => {
   const [formState, setFormState] = useState({
@@ -95,11 +97,11 @@ const Form = () => {
   };
 
   return (
-    <div className='signup-page-container'>
+    <SignUpPageContainer>
       <div className='image-card-2'></div>
 
       {/* //signup form */}
-      <div className='signup-form-container'>
+      <SignUpFormContainer>
         <h2>Please create...</h2>
 
         <form className='signup-form' onSubmit={formSubmit}>
@@ -167,8 +169,8 @@ const Form = () => {
             Finish
           </Button2>
         </form>
-      </div>
-    </div>
+      </SignUpFormContainer>
+    </SignUpPageContainer>
   );
 };
 

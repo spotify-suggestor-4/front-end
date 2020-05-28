@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
+import LoginPageContainer from "./Styles2/LoginPageContainer";
+import LoginFormContainer from "./Styles2/LoginFormContainer";
 import Button2 from "./Styles2/Button2";
 const Login = (props) => {
   //set user
@@ -39,10 +41,10 @@ const Login = (props) => {
   // console.log({ isLoading: props.isLoading });
 
   return (
-    <div className='login-page-container'>
+    <LoginPageContainer>
       <div className='image-card-3'></div>
 
-      <div className='login-form-container'>
+      <LoginFormContainer>
         <form className='login-form' onSubmit={handleLoginSubmit}>
           <span>
             <h1>Log in</h1>
@@ -73,9 +75,9 @@ const Login = (props) => {
           </div>
         </form>
         {/* //CLOSE FORM */}
-      </div>
+      </LoginFormContainer>
       {/* //CLOSE LOGIN CONTAINER */}
-    </div>
+    </LoginPageContainer>
     //CLOSE LOGIN PAGE
   );
 };
