@@ -26,6 +26,9 @@ const SignUpFormContainer = styled.div`
   }
   @media only screen and (max-device-width: 480px) {
     justify-content: center;
+    width: 100%;
+    align-content: space-around;
+    align-items: baseline;
   }
 `;
 

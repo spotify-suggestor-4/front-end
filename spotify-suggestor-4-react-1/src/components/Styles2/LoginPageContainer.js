@@ -19,6 +19,7 @@ const LoginPageContainer = styled.div`
     width: 80%;
     flex-direction: column;
     font-size: 1.6rem;
+    margin-left: 10%;
   }
 `;
 
