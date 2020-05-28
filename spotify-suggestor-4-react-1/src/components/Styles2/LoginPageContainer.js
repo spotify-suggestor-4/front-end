@@ -13,6 +13,8 @@ const LoginPageContainer = styled.div`
   margin-right: 5%;
   width: 90%;
 
+  /* //done */
+
   @media only screen and (max-device-width: 480px) {
     width: 80%;
     flex-direction: column;
