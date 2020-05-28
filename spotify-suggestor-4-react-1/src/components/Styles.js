@@ -24,6 +24,16 @@ export const Navbar = styled.nav`
   a {
     text-decoration: none;
     color: white;
+    @media only screen and (max-device-width: 480px) {
+      margin: 8px;
+    }
+  }
+
+  @media only screen and (max-device-width: 480px) {
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    font-size: 1.6rem;
   }
 `;
 
@@ -41,11 +51,19 @@ export const SearchContainer = styled.section`
     font-size: 3.2rem;
     text-shadow: 0 4px 2px -2px #fc1980;
     box-shadow: 0 4px 4px -2px #08fdee;
+
+    @media only screen and (max-device-width: 480px) {
+      font-size: 2rem;
+    }
   }
 
   h3 {
     margin-top: 5%;
     font-size: 2rem;
+
+    @media only screen and (max-device-width: 480px) {
+      font-size: 1.6rem;
+    }
   }
 
   input {
@@ -58,6 +76,12 @@ export const SearchContainer = styled.section`
     /* Top, Right, Bottom, Left */
     margin: 5%;
     box-shadow: 0 4px 2px -2px #08fdee;
+
+    @media only screen and (max-device-width: 480px) {
+      display: flex;
+      width: 300px;
+      height: 52px;
+    }
   }
 
   button {
@@ -68,6 +92,10 @@ export const SearchContainer = styled.section`
     border-radius: 8px;
     border-style: none;
     box-shadow: 0 3px 2px -2px #08fdee;
+
+    @media only screen and (max-device-width: 480px) {
+      width: 300px;
+    }
   }
 `;
 
