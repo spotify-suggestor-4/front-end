@@ -17,22 +17,24 @@ const SignUpPageContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin-left: 10%;
+    margin-left: 15%;
+    width: 80%;
   }
-  @media only screen and (max-device-width: 750px) {
+  @media only screen and (max-device-width: 650px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 0;
+    margin-left: 15%;
+    width: 80%;
   }
 
   @media only screen and (max-device-width: 480px) {
-    width: 100%;
+    width: 90%;
     margin-left: 5%;
-    /* flex-direction: row;
     justify-content: center;
-    align-items: center; */
+    align-content: center;
+    justify-items: left;
   }
 `;
 

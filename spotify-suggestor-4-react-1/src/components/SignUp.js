@@ -29,7 +29,7 @@ const Form = () => {
     email: yup.string().email("Must be a valid email").required(),
     password: yup
       .string()
-      .required("Please Enter your password")
+      .required("Please create your password")
       .matches(
         /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
         "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
