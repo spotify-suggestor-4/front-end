@@ -7,6 +7,7 @@ import SignUp from "./components/SignUp";
 import About from "./components/About";
 import PrivateRoute from "./components/PrivateRoute";
 import Suggestor from "./components/Suggestor";
+
 // Styles
 import { Navbar, LogoContainer } from "./components/Styles";
 // Logo
@@ -49,7 +50,7 @@ function App() {
           <GettingStarted />
         </Route> */}
         {/* Home should probably take use to the suggestor??  and not sure we need as many Nav items considering*/}
-        <Route exact path='/'>
+        <Route exact path='/gettingstarted'>
           <GettingStarted />
         </Route>
       </Switch>
