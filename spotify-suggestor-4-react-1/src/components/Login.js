@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
@@ -66,7 +66,9 @@ const Login = (props) => {
             onChange={(event) => handleChange(event)}
             value={user.password}
           />
-          <Button2 className='btn-3'>Log In</Button2>
+          <Link to='/'>
+            <Button2 className='btn-3'>Log In</Button2>
+          </Link>
           <div className='register_link'>
             <p>
               {" "}
