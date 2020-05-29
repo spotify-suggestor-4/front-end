@@ -9,7 +9,7 @@ const SignUpPageContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0;
+  margin-left: 10%;
   width: 100%;
 
   @media only screen and (max-device-width: 1280px) {
